@@ -13,8 +13,8 @@
 <body>
     <header>
         <section id="home">
-            <h1>Великий бургер</h1>
-            <p>Доставка їжі</p>
+            <p class="name">Великий бургер
+                <br> Доставка їжі</p>
             <nav>
                 <ul>
                     <li>
@@ -37,26 +37,39 @@
         </section>
     </header>
     <img src="pictures/burger-set.png" alt="Burger set">
-    <section id="delivery">
-        <h2>Доставка бургерів</h2>
-        <div>
-            <img src="pictures/burger-red.jpg" alt="Burger red rolls">
-            <br>
-            <p>80 грн</p>
-            <input type="submit" value="В кошик" />
-        </div>
-        <div>
-            <img src="pictures/big-tasty.jpg" alt="Burger big tasty">
-            <br>
-            <p>95 грн</p>
-            <input type="submit" value="В кошик" />
-        </div>
-        <div>
-            <img src="pictures/fishandbeef.jpg" alt="Burger fish&beef">
-            <br>
-            <p>80 грн</p>
-            <input type="submit" value="В кошик" />
-        </div>
+    <section class="products">
+        <section id="delivery">
+            <h2>Доставка бургерів</h2>
+            <div class="product-list">
+                <article class="product-card">
+                    <img src="pictures/burger-red.jpg" alt="Burger red rolls">
+                    <p><b>Бургер "Червоні булки"</b><br> 80 грн</p>
+                    <div class="button-container">
+                        <button class="button button-buy">
+                        В кошик
+                    </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="pictures/big-tasty.jpg" alt="Burger big tasty">
+                    <p><b>Бургер big tasty</b><br> 95 грн</p>
+                    <div class="button-container">
+                        <button class="button button-buy">
+                        В кошик
+                    </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="pictures/fishandbeef.jpg" alt="Burger fish&beef">
+                    <p><b>Бургер fish&beef</b><br> 120 грн</p>
+                    <div class="button-container">
+                        <button class="button button-buy">
+                        В кошик
+                    </button>
+                    </div>
+                </article>
+            </div>
+        </section>
     </section>
     <section id="about">
         <div>
@@ -76,31 +89,24 @@
             <div>
                 <img src="pictures/destination.png" alt="Mark">
                 <p>Адреса:</p>
-                <br>
                 <p>м.Львів</p>
-                <br>
                 <p>вул. Підвальна, 5</p>
             </div>
             <div>
                 <img src="pictures/phone.png" alt="Phone">
                 <p>Телефони:</p>
-                <br>
                 <p>+38(021)432 53 12</p>
-                <br>
                 <p>+38(074)795 95 37</p>
             </div>
             <div>
                 <img src="pictures/clock.png" alt="Clock">
                 <p>Години роботи:</p>
-                <br>
                 <p>ПН.-СБ.</p>
-                <br>
                 <p>Цілодобово</p>
             </div>
             <div>
                 <img src="pictures/mail.png" alt="Letter">
                 <p>E-MAIL:</p>
-                <br>
                 <p>vvoitovych1@gmail.com</p>
             </div>
         </div>
@@ -118,6 +124,7 @@
                     <label for="mail">E-mail:</label>
                     <input type="email" id="mail" name="mail" required>
                 </div>
+                <br>
                 <div>
                     <label for="msg">Відгук:</label>
                     <textarea id="msg" name="responce"></textarea>
