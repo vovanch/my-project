@@ -34,7 +34,16 @@ header #home li a {
     text-transform: uppercase;
     color: black;
 }
-
+header #home .box1 {
+   display: grid;
+   grid-column-start: 2;
+   grid-column-end: 3;
+}
+header #home .box2 {
+   display: grid;
+   grid-column-start: 2;
+   grid-column-end: 3;
+}
 .product-card {
     border: 1px solid grey;
 }
