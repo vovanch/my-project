@@ -39,19 +39,19 @@ header #home .box2 a img{
 header #home nav {
     grid-column: 1/3;
 }
-header #home nav ul {
+header #home #navbarNav .navbar-nav {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-header #home li {
+header #home #navbarNav .navbar-nav .nav-item {
     display: inline;
     list-style-type: none;
     font-size: 20px;
 }
 
-header #home li a {
+header #home #navbarNav .navbar-nav .nav-item .nav-link {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
@@ -162,6 +162,10 @@ body #contacts .info img {
    body #contacts .info {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+body #responce .form {
+    display: flex;
+    justify-content: center;
 }
 footer {
     text-align: center;
