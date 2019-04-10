@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|ZCOOL+XiaoWei');
 
-
+:root {
+    scroll-behavior: smooth; 
+}
 body {
     max-width: 980px;
     margin: auto;
+    
 }
 
 header #home {
     background-color: grey;
+}
+header #home{
+   display: grid;
+   grid-template-columns: 5fr 1fr;
 }
 
 header #home .name {
@@ -16,7 +23,22 @@ header #home .name {
     text-align: center;
     margin: 20px 10px;
 }
-
+header #home .box1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+header #home .box2{
+    align-self: center;
+    justify-self: center;
+}
+header #home .box2 a img{
+    height: 50px;
+    width: 50px;
+    border: 0;
+}
+header #home nav {
+    grid-column: 1/3;
+}
 header #home nav ul {
     display: flex;
     justify-content: space-around;
@@ -34,42 +56,38 @@ header #home li a {
     text-transform: uppercase;
     color: black;
 }
-header #home .box1 {
-   display: grid;
-   grid-column-start: 2;
-   grid-column-end: 3;
+
+body .font {
+    text-align: center;
+    background-color: grey;
 }
-header #home .box2 {
-   display: grid;
-   grid-column-start: 2;
-   grid-column-end: 3;
-}
-.product-card {
+
+body .product-card {
     border: 1px solid grey;
 }
 
-.product-card h3,
+body .product-card h3,
 .product-card p {
     padding: 0 5px;
 }
 
-.product-card img {
+body .product-card img {
     display: block;
     width: 100%;
 }
 
-.product-card .button-container {
+body .product-card .button-container {
     display: flex;
     justify-content: space-around;
 }
 
-.product-card .button-container .button {
+body .product-card .button-container .button {
     padding: 8px 32px;
 }
 
 
 
-.button {
+body .button {
     display: inline-block;
     color: black;
     font-size: 125%;
@@ -85,19 +103,23 @@ header #home .box2 {
     transition: box-shadow .2s, border-color .2s;
 }
 
-.button:hover {
+body .button:hover {
     box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0), inset 0 1px 2px rgba(0, 0, 0, 0), inset 0 0 0 60px rgba(255, 255, 0, .5);
 }
 
-.button:active {
+body .button:active {
     padding: calc(.25em + 1px) .5em calc(.25em - 1px);
     border-color: rgba(177, 159, 0, 1);
     box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .1), inset 0 1px 2px rgba(0, 0, 0, .3), inset 0 0 0 60px rgba(255, 255, 0, .45);
 }
 
+body #about .map{
+    display: flex;
+    justify-content: center;
+}
 
 @media (min-width: 480px) {
-    .product-list {
+   body .product-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5px;
@@ -105,13 +127,42 @@ header #home .box2 {
 }
 
 @media (min-width: 660px) {
-    .product-list {
+    body .product-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 980px) {
-    .product-list {
+   body .product-list {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+
+body #contacts .info img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+@media (min-width: 480px) {
+   body #contacts .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media (min-width: 660px) {
+    body #contacts .info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 980px) {
+   body #contacts .info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+footer {
+    text-align: center;
 }
